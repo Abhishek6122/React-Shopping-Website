@@ -1,0 +1,297 @@
+.banner{
+    width: 100%;
+    height: 680px;
+    background: url('./images/banner-bg.png') center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.banner .heading{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    font-size: 80px;
+    font-family: monospace;
+    padding: 0 100px;
+    color: ghostwhite;
+}
+.banner .buy{
+    display: inline-block;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: ghostwhite;
+    background: var(--color);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+}
+.banner .buy:hover{
+    background: var(--clr);
+}
+nav{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: var(--color);
+    margin: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+nav::before{
+    position: absolute;
+    left: -5%;
+    top: 0;
+    content: '';
+    width: 100px;
+    height: 100%;
+    background: var(--color);
+    transform: skewX(40deg);
+}
+nav::after{
+    position: absolute;
+    right: -5%;
+    top: 0;
+    content: '';
+    width: 100px;
+    height: 100%;
+    background: var(--color);
+    transform: skewX(-40deg);
+}
+nav a{
+    display: block;
+    margin: 0 30px;
+    font-size: 20px;
+    color: ghostwhite;
+    font-family: sans-serif;
+    transition: .2s ease-in-out;
+    /* position: absolute; */
+}
+nav a:hover{
+    color: var(--clr);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    margin-top: 60px;
+    color: ghostwhite;
+}
+.header #menu{
+    color: var(--color);
+    font-size: 60px;
+    font-weight: 900;
+    cursor: pointer;
+    color: ghostwhite;
+    /* border: 1px solid black; */
+}
+.header #menu:hover{
+    color: var(--clr);
+    transition: .2s ease-in-out;
+}
+.header .category{
+    background: var(--color);
+    padding: 10px 25px 10px 15px;
+    color: ghostwhite;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.header .category ul{
+    position: absolute;
+    left: 0;
+    width: 250px;
+    padding-top: 13px;
+    border-radius: 5px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: .2s ease-in-out;
+}
+.header .category ul a{
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    background: ghostwhite;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+}
+.header .category ul a:hover{
+    background: lightgray;
+}
+.header .category:hover>ul{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.header .category ion-icon{
+    position: absolute;
+    font-size: 18px;
+    right: 5px;
+    top: 12px;
+    transition: .2s ease-in-out;
+}
+.header .category:hover>ion-icon{
+    transform: rotate(180deg);
+}
+.header .search{
+    width: 600px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.header .search input{
+    width: 100%;
+    height: 100%;
+    background: ghostwhite;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+}
+.header .search input:focus{
+    outline: 3px solid var(--clr);
+}
+.header .search #search{
+    font-size: 30px;
+    background: var(--clr);
+    color: ghostwhite;
+    padding: 9px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 999;
+    transition: .2s ease-in-out;
+}
+.header .search #search:hover{
+    background: ghostwhite;
+    color: var(--clr);
+}
+.header .languages{
+    background: ghostwhite;
+    padding: 10px 20px 10px 15px;
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.header .languages ul{
+    position: absolute;
+    left: 0;
+    width: 250px;
+    padding-top: 13px;
+    border-radius: 5px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: .2s ease-in-out;
+}
+.header .languages ul a{
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    background: ghostwhite;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+}
+.header .languages ul a:hover{
+    background: lightgray;
+}
+.header .languages:hover>ul{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.header .languages ion-icon{
+    position: absolute;
+    font-size: 18px;
+    right: 3px;
+    top: 12px;
+    transition: .2s ease-in-out;
+}
+.header .languages:hover>ion-icon{
+    transform: rotate(180deg);
+}
+.header .login a{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: ghostwhite;
+    margin: 0 10px;
+    transition: .2s ease-in-out;
+}
+.header .login a:hover{
+    color: var(--clr)
+}
+.sidemenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100vh;
+    background: black;
+    z-index: 9999999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.sidemenu.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+.sidemenu a{
+    display: block;
+    color: ghostwhite;
+    font-size: 30px;
+    font-family: sans-serif;
+    padding: 15px 0 15px 40px;
+    transition: .2s ease-in-out;
+}
+.sidemenu a:hover{
+    color: var(--clr);
+}
+.sidemenu #close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: ghostwhite;
+    font-size: 50px;
+    /* border: 2px solid white; */
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.sidemenu #close:hover{
+    color: var(--clr);
+}
+.scrollline{
+    width: 0;
+    height: 8px;
+    background: var(--clr);
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    z-index: 9999999999;
+    /* transition: .1s linear; */
+}

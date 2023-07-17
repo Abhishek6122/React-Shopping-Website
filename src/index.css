@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background: #ecf0f1;
+}
+:root{
+  --color: #2b2a29;
+  --clr: #f26522;
+}
+::-webkit-scrollbar{
+  width: 5px;
+  background: linear-gradient(to bottom, #C4E538, #FFC312);
+}
+::-webkit-scrollbar-thumb{
+  background: #f26522;
+  border-radius: 10px;
+}
+::selection{
+  background: var(--clr);
+}

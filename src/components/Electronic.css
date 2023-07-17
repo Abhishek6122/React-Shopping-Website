@@ -1,0 +1,96 @@
+.electronic_heading{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 60px;
+    font-family: monospace;
+    position: relative;
+}
+.electronic_heading::before{
+    position: absolute;
+    bottom: -10px;
+    content: '';
+    width: 250px;
+    height: 7px;
+    transform: skewX(60deg);
+    background: var(--clr);
+}
+.electronic_main{
+    width: 100%;
+    /* background: #dfe6e9; */
+    margin-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    overflow: hidden;
+}
+.electronic_main .main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: .5s ease-in-out;
+}
+.electronic_main .main .electronic{
+    width: 350px;
+    margin: 0 20px;
+    background: ghostwhite;
+    padding: 20px 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+.electronic_main .main .electronic img{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.electronic_main .main .electronic img:hover{
+    transform: scale(1.1);
+}
+.electronic_main .main .electronic .heading{
+    text-align: center;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0;
+}
+.electronic_main .main .electronic .price{
+    text-align: center;
+    font-size: 20px;
+    font-family: monospace;
+    padding: 10px 0;
+}
+.electronic_main .main .electronic .info_btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.electronic_main .main .electronic .info_btns a{
+    display: inline-block;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: black;
+}
+.electronic_main .main .electronic .info_btns .buy{
+    color: var(--clr);
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.controls ion-icon{
+    font-size: 50px;
+    background: var(--color);
+    color: ghostwhite;
+    padding: 10px;
+    margin: 0 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: .2s ease-in-out;
+}
+.controls ion-icon:hover{
+    background: var(--clr);
+}
